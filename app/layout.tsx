@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {Providers} from "./providers";
 import "./globals.css";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Navbar } from "@/Components/navbar";
 
 export const viewport = {
@@ -26,6 +27,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
 						</header>
 						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
 							{children}
+              <SpeedInsights />
 						</main>
 					</div>
 			  </Providers>
